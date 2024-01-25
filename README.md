@@ -1,13 +1,13 @@
-*** cloud sync repo
+# cloud sync repo
 
-** aliyun OSS (alipapa cloud Object Storage ) sync usage 
-got to aliyun OSS directory 
+## aliyun OSS (alipapa cloud Object Storage ) sync usage 
+#### 1- got to aliyun OSS directory 
 update .ossutilconfig  and sync.sh 
 
-run  docker build
+#### 2- build docker image 
 docker build  -t oss .    
 
-run  builded image with tagrget volume to sync with specific ali yun bucket 
+#### 3-run  builded image with tagrget volume to sync with specific ali yun bucket 
 docker run -v ./:/data oss
 
 this will upload all the files in the current working directory to you bucket 
